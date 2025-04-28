@@ -33,7 +33,7 @@ router.post('/', async (req, res, next) => {
     const emailPromises = recipients.map(recipientEmail => {
       const mailOptions = {
         from: {
-          name: "The Support Team",
+          name: "This is for testing purpose",
           address: credentials.user
         },
         to: recipientEmail,
