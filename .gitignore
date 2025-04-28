@@ -1,0 +1,6 @@
+# unwanted files
+server.js
+gmail-server.js
+
+# environment variables
+.env
