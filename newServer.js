@@ -10,8 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || '*',
+    origin: process.env.CORS_ORIGIN || 'https://bulk-mail-ruddy.vercel.app',
+    credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'x-auth-token'],
+    exposedHeaders: ['x-auth-token']
 }));
 app.use(express.json());
 
