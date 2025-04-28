@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import { verifyTokens } from './middleware/verifytoken.js';
-import sendMail from './routes/sendMail.js';
+import sendMailRoutes from './routes/sendMail.js';
 
 dotenv.config();
 
@@ -42,12 +42,7 @@ app.use('/api', (req, res, next) => {
     verifyTokens(req, res, next);
 });
 
-app.use('/api', (req, res, next) => {
-    if (req.path === '/send-bulk-mail') {
-        return next();
-    }
-    sendMail(req, res, next);
-});
+app.use('/api/send-bulk-mail', sendMailRoutes);
 
 app.get('/', (req, res) => {
     res.json({ message: 'Bulk Email Server is running 🚀' });
