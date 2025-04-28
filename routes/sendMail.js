@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 const router = express.Router();
 
-router.post('/send-bulk-mail', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
     const { recipients, subject, body } = req.body;
     const credentials = req.smtpCredentials;
