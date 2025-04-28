@@ -23,6 +23,11 @@ export const tokenMap = {
     user: process.env.SMTP_USER_4,
     pass: process.env.SMTP_PASS_4,
   },
+  [process.env.TOKEN_USER_5]: {
+    host: process.env.SMTP_HOST_5,
+    user: process.env.SMTP_USER_5,
+    pass: process.env.SMTP_PASS_5,
+  },
 };
 
 // Debug log available tokens
