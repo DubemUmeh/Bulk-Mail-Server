@@ -9,13 +9,15 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Move CORS configuration before other middleware
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || 'https://bulk-mail-ruddy.vercel.app',
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: [process.env.CORS_ORIGIN, 'https://bulk-mail-sender-chi.vercel.app', 'http://localhost:5173'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'x-auth-token'],
-    exposedHeaders: ['x-auth-token']
+    credentials: false,
+    optionsSuccessStatus: 200
 }));
+
 app.use(express.json());
 
 // Add verify endpoint
