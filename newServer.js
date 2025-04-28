@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
-'https://bulk-mail-sender-chi.vercel.app',
+'https://bulk-mail-sender-adms.onrender.com',
 'http://localhost:5173'
 ];
 
