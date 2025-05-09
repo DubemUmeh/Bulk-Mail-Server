@@ -8,7 +8,7 @@ router.post('/', async (req, res, next) => {
     const { recipients, subject, body } = req.body;
     const credentials = req.smtpCredentials;
 
-    if (!credentials || !credentials.user || !credentials.pass || !credentials.host) {
+    if (!credentials || !credentials.user || !credentials.pass || !credentials.host || !credentials.from) {
       return res.status(401).json({ error: 'Invalid SMTP credentials' });
     }
 
@@ -33,7 +33,7 @@ router.post('/', async (req, res, next) => {
     const emailPromises = recipients.map(recipientEmail => {
       const mailOptions = {
         from: {
-          name: "This is for testing purpose",
+          name: credentials.from,
           address: credentials.user
         },
         to: recipientEmail,
