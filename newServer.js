@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
 'https://bulk-mail-sender-adms.onrender.com',
-'https://localhost:5173',
+'http://localhost:5173',
 ];
 
 app.use(cors({
