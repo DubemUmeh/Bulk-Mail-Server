@@ -42,7 +42,7 @@ app.use('/api', (req, res, next) => {
     verifyTokens(req, res, next);
 });
 
-app.use('/api/send-bulk-mail', sendMailRoutes);
+app.use('/api/send-bulk-mail', verifyTokens, sendMailRoutes);
 
 app.get('/', (req, res) => {
     res.json({ message: 'Bulk Email Server is running 🚀' });

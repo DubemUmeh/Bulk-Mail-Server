@@ -4,6 +4,7 @@ node_modules
 # unwanted files
 server.js
 gmail-server.js
+brevo-server.js
 
 # environment variables
 .env
