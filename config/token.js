@@ -33,6 +33,14 @@ export const tokenMap = {
     pass: process.env.SMTP_PASS_5,
     from: process.env.SMTP_FROM_5,
   },
+
+  
+  'testToken': {
+    host: 'smtp.mailersend.net',
+    user: 'MS_cVbZhY@test-xkjn41mm8804z781.mlsender.net',
+    pass: 'mssp.D5JUEvk.ynrw7gywr9o42k8e.XLY7eVh',
+    from: 'Test Support Team'
+  }
 };
 
 // Debug log available tokens
