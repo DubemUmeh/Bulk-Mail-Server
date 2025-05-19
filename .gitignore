@@ -5,6 +5,7 @@ node_modules
 server.js
 gmail-server.js
 brevo-server.js
+config/token.js
 
 # environment variables
 .env
