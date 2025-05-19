@@ -5,7 +5,10 @@ node_modules
 server.js
 gmail-server.js
 brevo-server.js
-config/token.js
+
+# unwanted folder
+config/
+
 
 # environment variables
 .env
