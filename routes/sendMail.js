@@ -26,7 +26,7 @@ router.post('/', async (req, res, next) => {
 
     // Verify connection configuration
     await transporter.verify();
-    console.log('SMTP connection verified for user:', credentials.user);
+    // console.log('SMTP connection verified for user:', credentials.user);
 
     if (!recipients || !subject || !body) {
       return res.status(400).json({ error: 'Missing required fields' });

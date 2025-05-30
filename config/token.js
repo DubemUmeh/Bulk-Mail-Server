@@ -44,10 +44,10 @@ export const tokenMap = {
 };
 
 // Debug log available tokens
-console.log('Available tokens:', Object.keys(tokenMap));
-console.log('Token configurations loaded:', Object.entries(tokenMap).map(([token, config]) => ({
-  token: token.substr(0, 8) + '...',
-  hasUser: !!config.user,
-  hasPass: !!config.pass,
-  hasHost: config.host
-})));
+// console.log('Available tokens:', Object.keys(tokenMap));
+// console.log('Token configurations loaded:', Object.entries(tokenMap).map(([token, config]) => ({
+//   token: token.substr(0, 8) + '...',
+//   hasUser: !!config.user,
+//   hasPass: !!config.pass,
+//   hasHost: config.host
+// })));

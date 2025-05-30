@@ -34,6 +34,7 @@ export function verifyTokens() {
         return res.status(401).json({ error: 'Invalid token' });
       }
       console.error('Token verification error:', error);
+      console.log('Error message:', error.message);
       res.status(500).json({ error: 'Internal server error' });
     }
   };
