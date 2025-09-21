@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
   'https://bulk-mail-sender-adms.onrender.com',
+  'bulky.dev.mandc2025.org',
   'http://localhost:5173',
 ];
 
